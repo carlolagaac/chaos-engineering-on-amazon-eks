@@ -53,10 +53,10 @@ Install Prometheus, but change to a different working directory first.
     git clone https://github.com/prometheus-operator/kube-prometheus
     cd kube-prometheus
     kubectl apply -f manifests/setup/
-    kubectl apply -f --server-side manifests/setup/0alertmanagerCustomResourceDefinition.yaml
-    kubectl apply -f --server-side manifests/setup/0prometheusCustomResourceDefinition.yaml
-    kubectl apply -f --server-side manifests/setup/0prometheusagentCustomResourceDefinition.yaml
-    kubectl apply -f --server-side manifests/setup/0thanosrulerCustomResourceDefinition.yaml
+    kubectl apply --server-side -f manifests/setup/0alertmanagerCustomResourceDefinition.yaml
+    kubectl apply --server-side -f manifests/setup/0prometheusCustomResourceDefinition.yaml
+    kubectl apply --server-side -f manifests/setup/0prometheusagentCustomResourceDefinition.yaml
+    kubectl apply --server-side -f manifests/setup/0thanosrulerCustomResourceDefinition.yaml
 
     kubectl apply -f manifests/
 
@@ -69,7 +69,7 @@ Check deployment status:
 Run:
     
     cd $WORKDIR
-    curl -sSL https://mirrors.chaos-mesh.org/v1.0.2/install.sh | bash
+    curl -sSL https://mirrors.chaos-mesh.org/v2.6.3/install.sh | bash
 
 Check deployment status:
 
