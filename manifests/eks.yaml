@@ -4,10 +4,11 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
+  version: "1.29"
   name: chaoscluster
   region: ap-southeast-1
   tags: 
-    project: chaos-demo
+    Project: chaos-demo
     auto-delete: "no"
 managedNodeGroups:
   - name: ng1
