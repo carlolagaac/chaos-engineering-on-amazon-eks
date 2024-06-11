@@ -39,6 +39,7 @@ The second repository has additional labs and supporting material.  Let's copy i
 You will need to install `eksctl` and make sure that you have enough free room in your account to create a new VPC.  See the [quick setup](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html) guide for more details.
 
 Then run:
+
     cd chaostoolkit-demos/manifests
     eksctl create cluster -f eks.yaml
 
