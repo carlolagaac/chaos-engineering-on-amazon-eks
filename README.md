@@ -53,6 +53,11 @@ Install Prometheus, but change to a different working directory first.
     git clone https://github.com/prometheus-operator/kube-prometheus
     cd kube-prometheus
     kubectl apply -f manifests/setup/
+    kubectl apply -f --server-side manifests/setup/0alertmanagerCustomResourceDefinition.yaml
+    kubectl apply -f --server-side manifests/setup/0prometheusCustomResourceDefinition.yaml
+    kubectl apply -f --server-side manifests/setup/0prometheusagentCustomResourceDefinition.yaml
+    kubectl apply -f --server-side manifests/setup/0thanosrulerCustomResourceDefinition.yaml
+
     kubectl apply -f manifests/
 
 Check deployment status:
